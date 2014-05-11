@@ -39,6 +39,7 @@ epc.data$Sub_metering_3 <- as.numeric(as.character(epc.data$Sub_metering_3))
 ###### save original par settings
 opar <- par() 
 
+png(file = "plot4.png")
 
 ####### plot 4
 par(mfrow = c(2, 2), mar=c(4, 2, 2, 2))
@@ -74,6 +75,6 @@ axis(2, cex.axis=.7)
 title(ylab = "Global Reactive Power", xlab="datetime", cex.lab=.7)
 
 
-
+dev.off()
 ######## restore par to original settings
 par(opar)
