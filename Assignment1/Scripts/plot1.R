@@ -26,5 +26,7 @@ names(epc.data)
 ##  Sub_metering_3: energy sub-metering No. 3 (in watt-hour of active energy). It corresponds to an electric water-heater and an air-conditioner.
 ################
 
-####### make the plot (convert Global_active_power to numeric)
+####### make the plot (convert Global_active_power to numeric)  ###### Exported from RStudio or use line below
+png(file = "plot1.png")  #### 480X480 by default    
 hist(as.numeric(as.character(epc.data$Global_active_power)), breaks=15, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)")
+dev.off()
