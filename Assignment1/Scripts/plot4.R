@@ -43,7 +43,8 @@ opar <- par()
 ####### plot 4
 par(mfrow = c(2, 2), mar=c(4, 2, 2, 2))
 
-###### plot Global Active Power data by time from Thursday to Saturday
+###### plot Global Active Power data by time from Thursday to Saturday  ##### Exported by RStudio
+
 tstime <- ts(as.character(epc.data$Time))
 with(epc.data, ts.plot(tstime, Global_active_power, gpars=list(xaxt='n', yaxt='n',  ann=FALSE, type="l")))
 axis(1, labels=c("Thu", "Fri", "Sat"), at=c(0, 1440, 2880), cex.axis=.7)
