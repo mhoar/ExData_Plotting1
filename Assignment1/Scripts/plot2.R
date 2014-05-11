@@ -40,11 +40,13 @@ epc.data$Sub_metering_3 <- as.numeric(as.character(epc.data$Sub_metering_3))
 opar <- par() 
 
 ####plot 2
-###### plot Global Active Power data by time from Thursday to Saturday
+###### plot Global Active Power data by time from Thursday to Saturday  ####### Exported in RStudio
+png(file = "plot2.png") ######## 480x480 by default
 tstime <- ts(as.character(epc.data$Time))
 with(epc.data, ts.plot(tstime, Global_active_power, gpars=list(xaxt='n', ann=FALSE, type="l")))
 axis(1, labels=c("Thu", "Fri", "Sat"), at=c(0, 1440, 2880), cex.axis=.9)
 title(ylab = "Global Active Power (kilowatts)")
+dev.off()
 
 
 ######## restore par to original settings
